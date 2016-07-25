@@ -13,10 +13,10 @@ class Main extends Base implements Listener
     $this->getServer()->getPluginManager()->registerEvents($this, $this);
   }
   public function onCommand(CommandSender $sender, Command $command, $label, array $args){
-        if(strtolower($command->getName()) === "test"){
-            $sender->sendMessage("Yay.. command worked as normal user!");
-            return true;
+        switch($command->getName()) {
+          case "test":
+              $sender->sendMessage("Yay.. command worked as normal user!");
+          break;
         }
-        return false;
     }
 }

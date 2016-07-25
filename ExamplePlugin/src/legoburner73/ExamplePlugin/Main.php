@@ -7,5 +7,7 @@ use pocketmine\event\Listener;
 
 class Main extends Base implements Listener
 {
-  
+  public function onEnable() {
+    $this->getServer()->getPluginManager()->registerEvents($this, $this);
+  }
 }
